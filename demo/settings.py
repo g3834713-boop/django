@@ -6,7 +6,9 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'gargrace.pythonanywhere.com'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -118,3 +120,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 load_dotenv()
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
+DEBUG = os.getenv("DEBUG", "False") == "True"
